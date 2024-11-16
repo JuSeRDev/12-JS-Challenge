@@ -40,6 +40,10 @@ body{
     grid-column: 1 / -1;
 }
 
+.img-menu, .img-menu-close{
+    display: none;
+}
+
 .reader-content{
     display: flex;
     justify-content: space-between;
@@ -82,6 +86,10 @@ a:hover{
     grid-column: 1/3;
     width: 100%;
     height: auto;
+}
+
+.img-mobile{
+    display: none;
 }
 
 .title{
@@ -194,3 +202,135 @@ a:hover{
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+
+@media (width <=500px) {
+
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+        margin-top: 10px;
+    }
+
+    .img-menu, .img-menu-close{
+        display: block;
+        cursor: pointer;
+        transition: display 0.3s ease;
+    }
+
+    .img-menu-close{
+        display: block;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+
+    .list{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100vw;
+        height: 100%;
+        background: var(--Of-white);
+        padding: 40px;
+        padding-top: 200px;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        overflow: hidden;
+    }
+
+    .active{
+        transform: translateX(0);
+    }
+
+    .img-desktop{
+        display: none;
+    }
+
+    .img-mobile{
+        display: block;
+    }
+
+    .grid{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        gap: 20px;
+    }
+
+    .title{
+        font-size: 50px;
+    }
+
+    .info{
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+
+    .aside-container-1,.aside-container-2, .aside-container-3{
+        padding: 30px 0;
+    }
+
+    .text-ac{
+        margin-top: 15px;
+        font-size: 16px;
+    }
+
+    .footer{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .container-footer{
+        height: 130px;
+       width: 100%;
+       gap: 20px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .img-footer{
+        width: 100px;
+        height: 130px;
+    }
+
+    .info-footer{
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 10px;
+        padding-right: 20px;
+    }
+
+    .title-footer{
+        margin: 0;
+        font-size: 19px;
+    }
+
+    .text-fotter{
+        font-size: 16px;
+    }
+}
