@@ -246,10 +246,10 @@ a:hover{
     .list{
         display: flex;
         flex-direction: column;
-        position: absolute;
+        position: fixed;
         top: 0;
         right: 0;
-        width: 100vw;
+        width: 50%;
         height: 100%;
         background: var(--Of-white);
         padding: 40px;
